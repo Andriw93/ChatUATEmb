@@ -37,12 +37,7 @@
 */
  embedded_svc.snippetSettingsFile.extraPrechatFormDetails = [
         {
-            "label": "First Name",
-            "transcriptFields": ["CustomerName__c"],
-            "displayToAgent":true
-        },
-        {
-            "label": "Last Name",
+            "label": "Name",
             "transcriptFields": ["CustomerName__c"],
             "displayToAgent":true
         },
@@ -58,16 +53,9 @@
         "entityFieldMaps": [{
             "doCreate":false,
             "doFind":false,
-            "fieldName":"LastName",
+            "fieldName":"Name",
             "isExactMatch":false,
-            "label":"Last Name"
-        }, 
-        {
-            "doCreate":false,
-            "doFind":false,
-            "fieldName":"FirstName",
-            "isExactMatch":false,
-            "label":"First Name"
+            "label":"Name"
         }, 
         {
             "doCreate":false,
