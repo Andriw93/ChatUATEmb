@@ -25,12 +25,20 @@
         },
         {
             "label": "Apellidos",
-            "transcriptFields": ["CustomerName__c"],
+            "transcriptFields": ["CustomerLastname__c"],
             "displayToAgent":true
         },
         {
             "label": "Correo electrónico",
             "transcriptFields": ["CustomerEmail__c"]
+        },
+ 	{
+            "label": "Consulta",
+            "transcriptFields": ["CustomerProblem__c"]
+        },
+        {
+            "label": "Consentimiento",
+            "transcriptFields": ["Consentimiento__c"]
         }]; 
 
     // disable creation of a contact and a case:
@@ -43,22 +51,39 @@
             "fieldName":"Nombre",
             "isExactMatch":false,
             "label":"Nombre"
-        },
-	{
+            },
+	    {
             "doCreate":false,
             "doFind":false,
             "fieldName":"Apellidos",
             "isExactMatch":false,
             "label":"Apellidos"
-        }, 
-        {
+           }, 
+           {
             "doCreate":false,
-            "doFind":false,
+            "doFind":true,
             "fieldName":"Correo electrónico",
             "isExactMatch":false,
             "label":"Correo electrónico"
-        }]
-    }];
+          }]
+    	}, 
+	{
+           "entityName":"Case",
+	   "entityFieldMaps": [{
+            "doCreate":false,
+            "doFind":false,
+            "fieldName":"Consulta",
+            "isExactMatch":false,
+            "label":"Consulta"
+            },
+	    {
+            "doCreate":false,
+            "doFind":false,
+            "fieldName":"Consentimiento",
+            "isExactMatch":false,
+            "label":"Consentimiento"
+           }]				      
+	];
 
         //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
         //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
